@@ -1,4 +1,4 @@
-# yy-ui
+# fyy-ui
 
 ## Project setup
 ```
