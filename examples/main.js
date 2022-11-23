@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from './router'
+import FYyUi from '../packages/index'
 
-import YUi from '../packages/index'
-Vue.use(YUi)
+Vue.use(FYyUi)
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App)
+  render: h => h(App),
+  router
 }).$mount('#app')

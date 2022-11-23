@@ -1,7 +1,13 @@
 import button from './button'
-
+import radio from './radio'
+import card from './card'
+import * as breadcrumb from './breadcrumb'
 const components = [
-  button
+  button,
+  radio,
+  card,
+  breadcrumb.Breadcrumb,
+  breadcrumb.BreadcrumbItem
 ]
 
 const install = (Vue) => {
