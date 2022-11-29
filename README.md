@@ -6,18 +6,15 @@ npm install
 ```
 
 ### Compiles and hot-reloads for development
+组件文档
 ```
-npm run serve
+npm run doc
 ```
 
 ### Compiles and minifies for production
+组件页面调试
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+npm run serve
 ```
 
 ### Customize configuration
