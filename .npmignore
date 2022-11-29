@@ -23,6 +23,7 @@ yarn-error.log*
 
 # 以下是新增的
 # 要忽略目录和指定文件
+docs/
 examples/
 packages/
 public/
