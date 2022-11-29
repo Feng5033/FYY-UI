@@ -10,6 +10,7 @@
 ```js
   import Vue from 'vue';
   import FYyUI from 'fyy-ui';
+  import 'fyy-ui/lib/fyy-ui.css'
   import App from './App.vue';
 
   Vue.use(FYyUI);
