@@ -8,7 +8,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "prepare": "husky install",
+    "lint": "eslint src",
+    "lint-staged": "lint-staged",
+    "commitlint": "commitlint --config commitlint.config.js -e -V",
     "doc": "docsify serve docs",
     "lib": "vue-cli-service build --target lib --name fyy-ui --dest lib packages/index.js"
   },
@@ -20,6 +23,8 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
@@ -30,6 +35,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^8.0.3",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.4",
     "node-sass": "^8.0.0",
     "sass-loader": "^13.2.0",
     "vue-template-compiler": "^2.6.14"
