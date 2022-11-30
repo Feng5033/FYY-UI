@@ -112,7 +112,8 @@ export default {
     border-radius: 20px;
   }
 
-  &.is-disabled {
+  &.is-disabled,
+  &.is-disabled:hover {
     color: #c0c4cc;
     cursor: not-allowed;
     background-image: none;
