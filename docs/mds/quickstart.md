@@ -20,3 +20,19 @@
     render: h => h(App)
   });
 ```
+
+接下来，如果你只希望引入部分组件，比如 Button 和 Select，那么需要在 main.js 中写入以下内容：
+
+```js
+import Vue from 'vue';
+import { Button, Card } from 'fyy-ui';
+import App from './App.vue';
+
+Vue.use(Button)
+Vue.use(Card)
+
+new Vue({
+  el: '#app',
+  render: h => h(App)
+});
+```

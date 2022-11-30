@@ -7,7 +7,6 @@ Breadcrumb.install = (Vue) => {
 BreadcrumbItem.install = (Vue) => {
   Vue.component(BreadcrumbItem.name, BreadcrumbItem)
 }
-export {
-  Breadcrumb,
-  BreadcrumbItem
-}
+
+export const breadcrumb = Breadcrumb
+export const breadcrumbItem = BreadcrumbItem
