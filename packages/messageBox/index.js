@@ -7,7 +7,7 @@ const Modal = Vue.extend(modalComponent)
 const modal = new Modal()
 modal.$mount()
 
-const alert = function (content, title, options) {
+const Alert = function (content, title, options) {
   const instance = new MessageBoxConstructor({
     data: {
       title,
@@ -27,7 +27,7 @@ const alert = function (content, title, options) {
   return instance
 }
 
-const confirm = function (content, title, options) {
+const Confirm = function (content, title, options) {
   return new Promise((resolve, reject) => {
     const instance = new MessageBoxConstructor({
       data: {
@@ -46,7 +46,5 @@ const confirm = function (content, title, options) {
   })
 }
 
-export {
-  alert,
-  confirm
-}
+export const alert = Alert
+export const confirm = Confirm

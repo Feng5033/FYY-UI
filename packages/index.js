@@ -1,16 +1,16 @@
 import button from './button'
 import radio from './radio'
 import card from './card'
-import * as breadcrumb from './breadcrumb'
-import Message from './message'
-import * as MessageBox from './messageBox'
-import Notification from './notification'
+import { breadcrumb, breadcrumbItem } from './breadcrumb'
+import message from './message'
+import { alert, confirm } from './messageBox'
+import notification from './notification'
 const components = [
   button,
   radio,
   card,
-  breadcrumb.Breadcrumb,
-  breadcrumb.BreadcrumbItem
+  breadcrumb,
+  breadcrumbItem
 ]
 
 const install = (Vue) => {
@@ -19,15 +19,24 @@ const install = (Vue) => {
     return Vue.component(item.name, item)
   })
 
-  Vue.prototype.$message = Message
-  Vue.prototype.$alert = MessageBox.alert
-  Vue.prototype.$confirm = MessageBox.confirm
-  Vue.prototype.$notify = Notification
+  Vue.prototype.$message = message
+  Vue.prototype.$alert = alert
+  Vue.prototype.$confirm = confirm
+  Vue.prototype.$notify = notification
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
+export const Button = button.install
+export const Radio = radio.install
+export const Card = card.install
+export const Breadcrumb = breadcrumb.install
+export const BreadcrumbItem = breadcrumbItem.install
+export const Message = message
+export const Alert = alert
+export const Confirm = confirm
+export const Notification = notification
 
 export default {
   install
